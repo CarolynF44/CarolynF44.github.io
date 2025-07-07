@@ -1,125 +1,93 @@
-< html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Carolyn's Portfolio</title>
   <style>
+    /* Periwinkle color palette */
+    :root {
+      --periwinkle-light: #ccccff;
+      --periwinkle-dark: #6666cc;
+      --background: #f5f6fa;
+      --text-color: #333333;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f6fa;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text-color);
+      line-height: 1.6;
     }
 
     header {
-      background-color: #ccccff; /* light periwinkle */
-      color: #222;
-      padding: 40px 20px;
+      background-color: var(--periwinkle-light);
       text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(102, 102, 204, 0.2);
     }
 
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 3rem;
+      color: var(--periwinkle-dark);
     }
 
-    h2 {
-      font-weight: normal;
+    header h2 {
       margin-top: 10px;
-      font-size: 1.3em;
-      color: #444;
+      font-weight: normal;
+      font-size: 1.5rem;
+      color: var(--periwinkle-dark);
+      font-style: italic;
     }
 
-    section {
+    main {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
+    section {
+      margin-bottom: 60px;
+    }
+
+    h3 {
+      color: var(--periwinkle-dark);
+      border-bottom: 2px solid var(--periwinkle-light);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
     .project {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       text-align: center;
+    }
+
+    .project-title {
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--periwinkle-dark);
     }
 
     iframe {
       border: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-top: 10px;
+      box-shadow: 0 5px 15px rgba(102, 102, 204, 0.3);
+      border-radius: 8px;
     }
 
     footer {
-      background-color: #eeeeff;
+      background-color: var(--periwinkle-light);
       text-align: center;
-      padding: 20px;
-      font-size: 0.95em;
-    }
+      padding: 20px 10
 
-    .project-title {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Carolyn's Portfolio</h1>
-    <h2>From Imagination to Innovation</h2>
-  </header>
-
-  <section>
-    <h3>About Me</h3>
-    <p>
-      I am a rising VHHS sophomore. I’m part of Backlight Theater and the Science Olympiad team. 
-      Some of my hobbies include singing, acting, reading, and crocheting. I aspire to become an engineer 
-      and create meaningful solutions through code.
-    </p>
-  </section>
-
-  <section>
-    <h3>My Python Projects</h3>
-
-    <div class="project">
-      <div class="project-title">Cadet Blue Snake App</div>
-      <iframe width="410" height="460"
-        src="https://academy.cs.cmu.edu/sharing/cadetBlueSnake395066/embed">
-      </iframe>
-    </div>
-
-    <!-- Placeholder projects -->
-    <div class="project">
-      <div class="project-title">Project 2 - Coming Soon</div>
-      <p>App related to another UN Global Goal.</p>
-    </div>
-
-    <div class="project">
-      <div class="project-title">Project 3 - Coming Soon</div>
-      <p>App related to another UN Global Goal.</p>
-    </div>
-
-    <div class="project">
-      <div class="project-title">Project 4 - Coming Soon</div>
-      <p>App related to another UN Global Goal.</p>
-    </div>
-
-    <div class="project">
-      <div class="project-title">Project 5 - Coming Soon</div>
-      <p>App related to another UN Global Goal.</p>
-    </div>
-
-    <div class="project">
-      <div class="project-title">Project 6 - Coming Soon</div>
-      <p>App related to another UN Global Goal.</p>
-    </div>
-  </section>
-
-  <footer>
-    📫 Contact me: <a href="mailto:carolyn.frayman@vhhscougars.org">carolyn.frayman@vhhscougars.org</a>
-  </footer>
-
-</body>
-</html>
 
