@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Carolyn's Portfolio</title>
   <style>
-    /* Periwinkle color palette */
+    /* Color palette */
     :root {
       --periwinkle-light: #ccccff;
       --periwinkle-dark: #6666cc;
+      --cream-yellow: #fffdd0;
+      --light-peach: #ffe5b4;
+      --light-pink: #ffd1dc;
       --background: #f5f6fa;
       --text-color: #333333;
     }
@@ -70,6 +73,32 @@
     .project {
       margin-bottom: 50px;
       text-align: center;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .project:nth-of-type(1) {
+      background-color: var(--periwinkle-light);
+    }
+
+    .project:nth-of-type(2) {
+      background-color: var(--cream-yellow);
+    }
+
+    .project:nth-of-type(3) {
+      background-color: var(--light-peach);
+    }
+
+    .project:nth-of-type(4) {
+      background-color: var(--light-pink);
+    }
+
+    .project:nth-of-type(5) {
+      background-color: var(--cream-yellow);
+    }
+
+    .project:nth-of-type(6) {
+      background-color: var(--light-peach);
     }
 
     .project-title {
@@ -77,6 +106,27 @@
       font-size: 1.3rem;
       margin-bottom: 10px;
       color: var(--periwinkle-dark);
+    }
+
+    .dropdown-button {
+      background-color: var(--periwinkle-light);
+      color: var(--text-color);
+      padding: 10px 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 15px;
+      margin-top: 10px;
+      text-align: left;
     }
 
     iframe {
@@ -121,11 +171,13 @@
           title="Cadet Blue Snake App"
           allowfullscreen
           loading="lazy"
-        ></iframe>
-        <div class="project-title"> Description:</div>
-        <p>This project´s goal was to create a visual presentation of 4 of the glabal goals.
-        This project was created with a partner with each partner in charge of 2 goals. 
-        I created the sections about the global goals of clean water and quality edication.</p>
+        ></iframe> 
+
+        <button class="dropdown-button" onclick="toggleDropdown()">Show More Info</button>
+        <div class="dropdown-content" id="project1-details">
+          <p><strong>Description:</strong> This project's goal was to create a visual presentation of 4 of the global goals. This project was created with a partner, each in charge of 2 goals. I created the sections about the global goals of clean water and quality education.</p>
+          <p><strong>Concepts Learned:</strong> How to create shapes in Python such as Rectangles, Ovals, Stars, etc. How to edit the shapes by changing traits like width, height, roundness, orientation, and color. I also learned how to create and edit labels.</p>
+        </div>
       </div>
 
       <div class="project">
@@ -158,6 +210,17 @@
   <footer>
     <!-- Footer intentionally left blank -->
   </footer>
+
+  <script>
+    function toggleDropdown() {
+      const content = document.getElementById("project1-details");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
