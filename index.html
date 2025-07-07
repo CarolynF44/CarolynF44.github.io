@@ -12,6 +12,7 @@
       --cream-yellow: #fffdd0;
       --light-peach: #ffe5b4;
       --light-pink: #ffd1dc;
+      --hot-pink: #ff69b4;
       --background: #f5f6fa;
       --text-color: #333333;
     }
@@ -78,7 +79,7 @@
     }
 
     .project:nth-of-type(1) {
-      background-color: var(--periwinkle-light);
+      background-color: var(--light-pink);
     }
 
     .project:nth-of-type(2) {
@@ -168,15 +169,31 @@
           width="410"
           height="460"
           src="https://academy.cs.cmu.edu/sharing/cadetBlueSnake395066/embed"
-          title="Cadet Blue Snake App"
+          title="Global Goals Splash Screen"
           allowfullscreen
           loading="lazy"
         ></iframe> 
 
-        <button class="dropdown-button" onclick="toggleDropdown()">Show More Info</button>
+        <button class="dropdown-button" onclick="toggleDropdown color=var(--hot-pink)()">Show More Info</button>
         <div class="dropdown-content" id="project1-details">
           <p><strong>Description:</strong> This project's goal was to create a visual presentation of 4 of the global goals. This project was created with a partner, each in charge of 2 goals. I created the sections about the global goals of clean water and quality education.</p>
-          <p><strong>Concepts Learned:</strong> How to create shapes in Python such as Rectangles, Ovals, Stars, etc. How to edit the shapes by changing traits like width, height, roundness, orientation, and color. I also learned how to create and edit labels.</p>
+          <p><strong>Concepts Learned:</strong> How to create shapes in Python such as Rectangles, Ovals, Stars, etc. How to edit the shapes by changing traits such as width, height, roundness, orientation,color,etc. and How to create and edit labels.</p>
+          <p><strong>Sample Code:Polygon(298,215,298,235,270,235,270,265,400,265,400,215,fill='crimson')
+Circle(298,225,10,fill='crimson')
+Circle(298,230,10,fill='crimson')
+Circle(274,250,15,fill='crimson')
+Polygon(235,300,239,350,270,355,301,350,305,300,270,310,fill=None,border='fireBrick',borderWidth=8)
+Polygon(300,300,296,345,270,350,270,310,fill=gradient('ghostWhite','whiteSmoke','gainsboro',start='right'))
+Polygon(240,300,244,345,270,350,270,310,fill=gradient('ghostWhite','whiteSmoke','gainsboro',start='left'))
+Line(270,310,270,350)
+Polygon(240,300,244,345,270,350,296,345,300,300,270,310,fill=None,border='black')
+Label('Quality',350,230,font='montserrat',size=25,fill='ghostWhite')
+Label('Education',335,250,font='montserrat',size=25,fill='ghostWhite')
+Line(355,310,320,360,lineWidth=10,fill=gradient('yellow','gold'))
+Polygon(315,356,325,362,313,370,fill=gradient('burlyWood','peru',start='bottom'))
+Rect(353,302,10,9,rotateAngle=34,fill='hotPink')
+Line(350,308,360,314,fill='dimGray')</strong></p>
+          <p><strong> This is the code for the quality education section. It shows the code for the shapes and label that make the book,pencil and text.</strong></p>
         </div>
       </div>
 
