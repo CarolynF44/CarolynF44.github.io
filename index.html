@@ -208,8 +208,32 @@ Line(350,308,360,314,fill='dimGray')</p>
           title="Global Goals Splash Screen"
           allowfullscreen
           loading="lazy"
-        ></iframe> 
-        <p>App related to another UN Global Goal.</p>
+        ></iframe>  
+      </button><button class="dropdown-button" onclick="toggleDropdown()">Show More Info</button>
+        <div class="dropdown-content" id="project1-details">
+          <p><strong>Description:</strong> This project's goal was to create a slide show of 1 of the global goals. We chose climate action. This project was created with 2 partners, each in charge of 2 slides. I created the 4th and 5th slides with the tactics and stats</p>
+          <p><strong>Concepts Learned:</strong> How to create and call functions</p>
+          <p>Sample Code: if(slide.value == 5):
+        targets.visible=False
+        target1.visible=False
+        target2.visible=False
+        target3.visible=False
+        target4.visible=False
+        target5.visible=False
+        stat1.visible=True
+        stats.visible=True
+        stat2.visible=True
+        stat3.visible=True
+        app.background='peachPuff'
+        cover(300,280,'peachPuff')
+        cover(30,200,'peachPuff')
+        cover(350,100,'peachPuff')
+        cover(50,300,'peachPuff')
+        co2(170,300)
+        progress(75)
+          </p>
+          <p><strong> This is the code for the stats slide. In this section of code I call on the functions co2,progress and cover. This functions code for the co2 logo, the progress bar and teh covers taht cover the old logos.</strong></p>
+        </div>
       </div>
 
       <div class="project">
