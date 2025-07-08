@@ -127,10 +127,6 @@
       display: inline-block;
     }
 
-    .rotated {
-      transform: rotate(180deg);
-    }
-
     .dropdown-content {
       display: none;
       background-color: #ffffff;
@@ -140,12 +136,20 @@
       margin-top: 10px;
       text-align: left;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      white-space: pre-wrap;
     }
 
     iframe {
       border: none;
       box-shadow: 0 5px 15px rgba(102, 102, 204, 0.3);
       border-radius: 8px;
+    }
+
+    code {
+      background-color: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
     }
 
     footer {
@@ -192,7 +196,24 @@
         <div class="dropdown-content" id="project1-details">
           <p><strong>Description:</strong> This project's goal was to create a visual presentation of 4 of the global goals. This project was created with a partner, each in charge of 2 goals. I created the sections about the global goals of clean water and quality education.</p>
           <p><strong>Concepts Learned:</strong> How to create shapes in Python such as Rectangles, Ovals, Stars, etc. How to edit the shapes by changing traits such as width, height, roundness, orientation, color, etc., and how to create and edit labels.</p>
-          <p><strong>Sample Code:</strong> Polygon(298,215,298,235,270,235,270,265,400,265,400,215,fill='crimson')...</p>
+          <p><strong>Sample Code:</strong></p>
+          <code>
+Polygon(298,215,298,235,270,235,270,265,400,265,400,215,fill='crimson')<br>
+Circle(298,225,10,fill='crimson')<br>
+Circle(298,230,10,fill='crimson')<br>
+Circle(274,250,15,fill='crimson')<br>
+Polygon(235,300,239,350,270,355,301,350,305,300,270,310,fill=None,border='fireBrick',borderWidth=8)<br>
+Polygon(300,300,296,345,270,350,270,310,fill=gradient('ghostWhite','whiteSmoke','gainsboro',start='right'))<br>
+Polygon(240,300,244,345,270,350,270,310,fill=gradient('ghostWhite','whiteSmoke','gainsboro',start='left'))<br>
+Line(270,310,270,350)<br>
+Polygon(240,300,244,345,270,350,296,345,300,300,270,310,fill=None,border='black')<br>
+Label('Quality',350,230,font='montserrat',size=25,fill='ghostWhite')<br>
+Label('Education',335,250,font='montserrat',size=25,fill='ghostWhite')<br>
+Line(355,310,320,360,lineWidth=10,fill=gradient('yellow','gold'))<br>
+Polygon(315,356,325,362,313,370,fill=gradient('burlyWood','peru',start='bottom'))<br>
+Rect(353,302,10,9,rotateAngle=34,fill='hotPink')<br>
+Line(350,308,360,314,fill='dimGray')
+          </code>
           <p><strong>Explanation:</strong> This is the code for the quality education section. It shows the code for the shapes and labels that make the book, pencil, and text.</p>
         </div>
       </div>
@@ -214,11 +235,32 @@
         <div class="dropdown-content" id="project2-details">
           <p><strong>Description:</strong> This project's goal was to create a slide show of one of the global goals: Climate Action. I created slides 4 and 5 focused on tactics and statistics.</p>
           <p><strong>Concepts Learned:</strong> How to create and call functions.</p>
-          <p><strong>Sample Code:</strong> if(slide.value == 5): ...</p>
+          <p><strong>Sample Code:</strong></p>
+          <code>
+if(slide.value == 5):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;targets.visible = False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target1.visible = False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target2.visible = False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target3.visible = False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target4.visible = False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target5.visible = False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stat1.visible = True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stats.visible = True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stat2.visible = True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stat3.visible = True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;app.background = 'peachPuff'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cover(300, 280, 'peachPuff')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cover(30, 200, 'peachPuff')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cover(350, 100, 'peachPuff')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cover(50, 300, 'peachPuff')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;co2(170, 300)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;progress(75)
+          </code>
           <p><strong>Explanation:</strong> This code shows how I switched between slides, hid previous elements, and called helper functions like <code>co2()</code>, <code>cover()</code>, and <code>progress()</code>.</p>
         </div>
       </div>
 
+      <!-- Additional Projects -->
       <div class="project">
         <div class="project-title">Project 3 - Coming Soon</div>
         <p>App related to another UN Global Goal.</p>
@@ -238,26 +280,20 @@
         <div class="project-title">Project 6 - Coming Soon</div>
         <p>App related to another UN Global Goal.</p>
       </div>
-
     </section>
   </main>
 
-  <footer>
-    <!-- Footer intentionally left blank -->
-  </footer>
+  <footer></footer>
 
   <script>
     function toggleDropdown(id, button) {
       const content = document.getElementById(id);
       const arrow = button.querySelector('.arrow');
-
       if (content.style.display === "block") {
         content.style.display = "none";
-        arrow.classList.remove("rotated");
         arrow.textContent = "▼";
       } else {
         content.style.display = "block";
-        arrow.classList.add("rotated");
         arrow.textContent = "▲";
       }
     }
