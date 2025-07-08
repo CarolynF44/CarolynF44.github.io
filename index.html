@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Carolyn's Portfolio</title>
   <style>
-    /* Color palette */
     :root {
       --periwinkle-light: #ccccff;
       --periwinkle-dark: #6666cc;
@@ -173,66 +172,33 @@
           allowfullscreen
           loading="lazy"
         ></iframe> 
-       </button><button class="dropdown-button" onclick="toggleDropdown()">Show More Info</button>
+
+        <button class="dropdown-button" onclick="toggleDropdown('project1-details')">Show More Info</button>
         <div class="dropdown-content" id="project1-details">
           <p><strong>Description:</strong> This project's goal was to create a visual presentation of 4 of the global goals. This project was created with a partner, each in charge of 2 goals. I created the sections about the global goals of clean water and quality education.</p>
-          <p><strong>Concepts Learned:</strong> How to create shapes in Python such as Rectangles, Ovals, Stars, etc. How to edit the shapes by changing traits such as width, height, roundness, orientation,color,etc. and How to create and edit labels.</p>
-          <p>Sample Code:Polygon(298,215,298,235,270,235,270,265,400,265,400,215,fill='crimson')
-Circle(298,225,10,fill='crimson')
-Circle(298,230,10,fill='crimson')
-Circle(274,250,15,fill='crimson')
-Polygon
-(235,300,239,350,270,355,301,350,305,300,270,310,fill=None,border='fireBrick',borderWidth=8)
-Polygon
-(300,300,296,345,270,350,270,310,fill=gradient('ghostWhite','whiteSmoke','gainsboro',start='right'))
-Polygon
-(240,300,244,345,270,350,270,310,fill=gradient('ghostWhite','whiteSmoke','gainsboro',start='left'))
-Line(270,310,270,350)
-Polygon(240,300,244,345,270,350,296,345,300,300,270,310,fill=None,border='black')
-Label('Quality',350,230,font='montserrat',size=25,fill='ghostWhite')
-Label('Education',335,250,font='montserrat',size=25,fill='ghostWhite')
-Line(355,310,320,360,lineWidth=10,fill=gradient('yellow','gold'))
-Polygon(315,356,325,362,313,370,fill=gradient('burlyWood','peru',start='bottom'))
-Rect(353,302,10,9,rotateAngle=34,fill='hotPink')
-Line(350,308,360,314,fill='dimGray')</p>
-          <p><strong> This is the code for the quality education section. It shows the code for the shapes and labels that make the book,pencil and text.</strong></p>
+          <p><strong>Concepts Learned:</strong> How to create shapes in Python such as Rectangles, Ovals, Stars, etc. How to edit the shapes by changing traits such as width, height, roundness, orientation, color, etc., and how to create and edit labels.</p>
+          <p><strong>Sample Code:</strong> Polygon(298,215,298,235,270,235,270,265,400,265,400,215,fill='crimson')...</p>
+          <p><strong>Explanation:</strong> This is the code for the quality education section. It shows the code for the shapes and labels that make the book, pencil, and text.</p>
         </div>
       </div>
 
       <div class="project">
-        <div class="project-title">Project 2 </div> 
+        <div class="project-title">Project 2</div>
         <iframe
           width="410"
           height="460"
-          src="https://academy.cs.cmu.edu/sharing/floralWhiteFish641585/embed"> 
-          title="Global Goals Splash Screen"
+          src="https://academy.cs.cmu.edu/sharing/floralWhiteFish641585/embed"
+          title="Project 2"
           allowfullscreen
           loading="lazy"
         ></iframe>  
-      </button> class="dropdown-button" onclick="toggleDropdown()">Show More Info</button>
+
+        <button class="dropdown-button" onclick="toggleDropdown('project2-details')">Show More Info</button>
         <div class="dropdown-content" id="project2-details">
-          <p><strong>Description:</strong> This project's goal was to create a slide show of 1 of the global goals. We chose climate action. This project was created with 2 partners, each in charge of 2 slides. I created the 4th and 5th slides with the tactics and stats</p>
-          <p><strong>Concepts Learned:</strong> How to create and call functions</p>
-          <p>Sample Code: if(slide.value == 5):
-        targets.visible=False
-        target1.visible=False
-        target2.visible=False
-        target3.visible=False
-        target4.visible=False
-        target5.visible=False
-        stat1.visible=True
-        stats.visible=True
-        stat2.visible=True
-        stat3.visible=True
-        app.background='peachPuff'
-        cover(300,280,'peachPuff')
-        cover(30,200,'peachPuff')
-        cover(350,100,'peachPuff')
-        cover(50,300,'peachPuff')
-        co2(170,300)
-        progress(75)
-          </p>
-          <p><strong> This is the code for the stats slide. In this section of code I call on the functions co2,progress and cover. This functions code for the co2 logo, the progress bar and teh covers taht cover the old logos.</strong></p>
+          <p><strong>Description:</strong> This project's goal was to create a slide show of one of the global goals: Climate Action. I created slides 4 and 5 focused on tactics and statistics.</p>
+          <p><strong>Concepts Learned:</strong> How to create and call functions.</p>
+          <p><strong>Sample Code:</strong> if(slide.value == 5): ...</p>
+          <p><strong>Explanation:</strong> This code shows how I switched between slides, hid previous elements, and called helper functions like <code>co2()</code>, <code>cover()</code>, and <code>progress()</code>.</p>
         </div>
       </div>
 
@@ -255,6 +221,7 @@ Line(350,308,360,314,fill='dimGray')</p>
         <div class="project-title">Project 6 - Coming Soon</div>
         <p>App related to another UN Global Goal.</p>
       </div>
+
     </section>
   </main>
 
@@ -263,18 +230,11 @@ Line(350,308,360,314,fill='dimGray')</p>
   </footer>
 
   <script>
-    function toggleDropdown() {
-      const content = document.getElementById("project1-details");
+    function toggleDropdown(id) {
+      const content = document.getElementById(id);
       content.style.display = content.style.display === "block" ? "none" : "block";
     }
   </script>
 
 </body>
 </html>
-
-
-</body>
-</html>
-
-
-
