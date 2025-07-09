@@ -238,25 +238,21 @@ Line(350,308,360,314,fill='dimGray')
           <p><strong>Sample Code:</strong></p>
           <code>
 if(slide.value == 5):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;targets.visible = False<br>
-&nbsp;&nbsp;&nbsp;&nbsp;target1.visible = False<br>
-&nbsp;&nbsp;&nbsp;&nbsp;target2.visible = False<br>
-&nbsp;&nbsp;&nbsp;&nbsp;target3.visible = False<br>
-&nbsp;&nbsp;&nbsp;&nbsp;target4.visible = False<br>
-&nbsp;&nbsp;&nbsp;&nbsp;target5.visible = False<br>
-&nbsp;&nbsp;&nbsp;&nbsp;stat1.visible = True<br>
-&nbsp;&nbsp;&nbsp;&nbsp;stats.visible = True<br>
-&nbsp;&nbsp;&nbsp;&nbsp;stat2.visible = True<br>
-&nbsp;&nbsp;&nbsp;&nbsp;stat3.visible = True<br>
-&nbsp;&nbsp;&nbsp;&nbsp;app.background = 'peachPuff'<br>
-&nbsp;&nbsp;&nbsp;&nbsp;cover(300, 280, 'peachPuff')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;cover(30, 200, 'peachPuff')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;cover(350, 100, 'peachPuff')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;cover(50, 300, 'peachPuff')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;co2(170, 300)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;progress(75)
+&nbsp;&nbsp;&nbsp;&nbsp;def co2(x,y,color):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Rect(x-30,y-30,60,60,fill=color)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Line(x,y,x-20,y-20,fill='gold',lineWidth=3)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Line(x,y,x+20,y-20,fill='gold',lineWidth=3) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Circle(x+20,y-20,7,fill='red') <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Circle(x-20,y-20,7,fill='red')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Circle(x,y,10,fill='black')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Label('CO2',x,y+25)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Example of when called: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;def onMousePress(x,y):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;slide.value+=1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(slide.value == 2):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;co2(350,100,'papayaWhip')<br>
           </code>
-          <p><strong>Explanation:</strong> This code shows how I switched between slides, hid previous elements, and called helper functions like <code>co2()</code>, <code>cover()</code>, and <code>progress()</code>.</p>
+          <p><strong>Explanation:</strong> This code shows how I created the co2 function for my logo. It also shows an example of when I called the function.</p>
         </div>
       </div>
 
