@@ -237,21 +237,41 @@ Line(350,308,360,314,fill='dimGray')
           <p><strong>Concepts Learned:</strong> How to create and call functions.</p>
           <p><strong>Sample Code:</strong></p>
           <code>
-&nbsp;&nbsp;&nbsp;&nbsp;def co2(x,y,color):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;  Rect(x-30,y-30,60,60,fill=color)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;   Line(x,y,x-20,y-20,fill='gold',lineWidth=3)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;  Line(x,y,x+20,y-20,fill='gold',lineWidth=3) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;  Circle(x+20,y-20,7,fill='red') <br>
-&nbsp;&nbsp;&nbsp;&nbsp;  Circle(x-20,y-20,7,fill='red')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;  Circle(x,y,10,fill='black')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;  Label('CO2',x,y+25)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Example of when called: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;def onMousePress(x,y):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;  slide.value+=1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;  if(slide.value == 2):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;    co2(350,100,'papayaWhip')<br>
+            def co2(x,y,color):
+    Rect(x-30,y-30,60,60,fill=color)
+    Line(x,y,x-20,y-20,fill='gold',lineWidth=3)    
+    Line(x,y,x+20,y-20,fill='gold',lineWidth=3)
+    Circle(x+20,y-20,7,fill='red')
+    Circle(x-20,y-20,7,fill='red')
+    Circle(x,y,10,fill='black')
+    Label('CO2',x,y+25)
+if(slide.value == 2):
+        Rect(0,0,400,400,fill='blue')
+        cover(300,280,'blue')
+        <strong></strong>co2(350,100,'papayaWhip')</strong>
+        progress(30)
+        Sun(200,200,'gold')
+        title.visible=False
+        Label("Problems with Climate Change:",200,200)
+        Label("Climate change presents a multitude of problems by impacting the enviroment.",200,280, size=11)
+        Label("Drought can harm food production and human healht.",200, 300, size=11)
+        Label("Impacting biodiversity and nature, water and food security",200,320,size=11)
+        Label("It disprortionately affects vulnerable populations",200,340,size=12)
+        polber(40,60)
+    if(slide.value == 3):
+        Rect(0,0,400,400,fill='blue')
+        Sun(120,280,'yellow')
+        Label("Climate change poses significant threats to wildlife by disrupting habitats.",200,40, size=12)
+        Label("Some species populatins may decline, many will shift their ranges substantially.",200,60,size=11)
+        Label("Rising water temperature are harming salmon populatins in many rivers", 200,140,size=12)
+        cover(300,280,'blue')
+        cover(350,100,'blue')
+        <strong>co2(30,200,'slateBlue')</strong>
+        progress(45)
+        polber(320,240)
           </code>
-          <p><strong>Explanation:</strong> This code shows how I created the co2 function for my logo. It also shows an example of when I called the function.</p>
+          <p><strong>Explanation:</strong> This code shows how I created the co2 function for my logo. It also shows 2 examples of when I called the function. The code that calls the function is bolded.
+          The parameters required for the function are an X and Y and a color. The X and Y is the center of the logo and the color becomes the background color of the logo.</p>
         </div>
       </div>
 
