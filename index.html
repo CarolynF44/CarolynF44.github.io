@@ -277,8 +277,66 @@ if(slide.value == 2):
 
       <!-- Additional Projects -->
       <div class="project">
-        <div class="project-title">Project 3 - Coming Soon</div>
-        <p>App related to another UN Global Goal.</p>
+        <div class="project-title">Project 3</div>
+        <iframe
+          width="410"
+          height="460"
+          src="https://academy.cs.cmu.edu/sharing/rosyBrownZebra626258"
+          title="Project 2"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>  
+      </div>
+      <button class="dropdown-button" onclick="toggleDropdown('project2-details', this)">
+          Show Info <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-content" id="project3-details">
+          <p><strong>Description:</strong> This project's goal was to create a game realted to one of the global goals. My game was related to clean and efficinet energy.
+            This game is a cookie clicker style game where you click to get money to buy solar panels and wind turbines. This clears pollution in the process. This gets you energy. Once you have enough clean energy you win. </p>
+          <p><strong>Concepts Learned:</strong> If statements and more complex functions.</p>
+          <p><strong>Sample Code:</strong></p>
+          <code>
+            def windTurbine(center,color):
+    Circle(center,200,5,fill=color)
+    Circle(center-25,240,5,fill=color)
+    Circle(center+25,240,5,fill=color)
+    Line(center,300,center,200,fill=color,lineWidth=10)
+    Line(center,225,center-25,240,lineWidth=10,fill=color)
+    Line(center,225,center+25,240,lineWidth=10,fill=color)
+    Circle(center,225,5,fill='lightGrey')
+    if(color=='red'):
+        app.pollution.opacity=38
+    if(color=='orange'):
+        app.pollution.opacity=36
+    if(color=='yellow'):
+        app.pollution.opacity=34
+    if(color=='yellowGreen'):
+        app.pollution.opacity=32
+    if(color=='green'):
+        app.pollution.opacity=30
+    if(color=='teal'):
+        app.pollution.opacity=28
+    if(color=='blue'):
+        app.pollution.opacity=26
+    if(color=='indigo'):
+        app.pollution.opacity=24
+    if(color=='purple'):
+        app.pollution.opacity=22
+    if(color=='magenta'):
+        app.pollution.opacity=20
+        <strong>if(app.ownedTurbines.value==1):
+            windTurbine(15,'red')
+            energyBar(15)
+        elif(app.ownedTurbines.value==2):
+            energyBar(30)
+            windTurbine(75,'orange')
+        elif(app.ownedTurbines.value==3):
+            energyBar(45)
+            windTurbine(135,'yellow')</strong>
+          </code>
+          <p><strong>Explanation:</strong> This code shows how I created the co2 function for my logo. It also shows 2 examples of when I called the function. The code that calls the function is bolded.
+          The parameters required for the function are an X and Y and a color. The X and Y written in the parameters codes for the center of the logo and the color becomes the background color of the logo.</p>
+        </div>
       </div>
 
       <div class="project">
