@@ -282,7 +282,7 @@ if(slide.value == 2):
           width="410"
           height="460"
           src="https://academy.cs.cmu.edu/sharing/rosyBrownZebra626258"
-          title="Project 2"
+          title="Project 3"
           allowfullscreen
           loading="lazy"
         ></iframe>  
@@ -340,8 +340,55 @@ if(slide.value == 2):
       </div>
 
       <div class="project">
-        <div class="project-title">Project 4 - Coming Soon</div>
-        <p>App related to another UN Global Goal.</p>
+        <div class="project-title">Project 4 </div>
+         <iframe
+          width="410"
+          height="460"
+          src="https://academy.cs.cmu.edu/sharing/gainsboroFly492394"
+          title="Project 4"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>  
+      <button class="dropdown-button" onclick="toggleDropdown('project3-details', this)">
+          Show Info <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-content" id="project4-details">
+          <p><strong>Description:</strong> This project's goal was to create a code to test or educat someone on one of the global goals. My game was related to good health and well being.
+            This game is a day in life. You answer questions throughout the 'day' that are related to your health. Depending on you actions you will gte a result at the end telling you if you are healthy or unhealthy. </p>
+          <p><strong>Concepts Learned:</strong> if-elifs and else statements,shape methods such as contains or addPoints, custom properties and keyPress and keyRelease.   </p>
+          <p><strong>Sample Code:</strong></p>
+          <code>
+            def onKeyPress(key):
+    if(app.fourthSlide==True):
+        app.fourthSlide=False
+        if(key==('a')):
+            results()
+            app.good.value+=1
+        elif(key==('b')):
+            results()
+            app.bad.value+=1
+
+            if(app.mainScreen==True and app.startButton.contains(mouseX,mouseY)):
+        question()
+        app.mainScreen=False
+
+            def question():
+    app.directions.visible=False
+    app.directionssss.visible=False
+    app.mainLabel.visible=False
+    app.question=True
+    app.start.visible=False
+    app.startButton.visible=False
+    app.title.value='Its time for breakfast! Choose a food to eat'
+    apple()
+    cupcake()
+    <strong>cursor.toFront()</strong>
+    app.background=gradient('peachPuff','lemonChiffon','white')
+          </code>
+          <p><strong>Explanation:</strong> The first chunk for code shows an example of me using on keyPress and if and elif statements as a way for the player to choose an answer.
+          The second chunk shows on example of contains. This codes for when the player clicks the start button. If the start button contains (mouseX,mouseY) the next screen is shown.
+          The third chunk has a bolded line of code the shows an example of shape properties.(toFront) It brings the cursor to the front so it isnt covered.</p>
+        </div>
       </div>
 
       <div class="project">
