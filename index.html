@@ -405,9 +405,9 @@ if(slide.value == 2):
           Show Info <span class="arrow">▼</span>
         </button>
         <div class="dropdown-content" id="project5-details">
-          <p><strong>Description:</strong> This project's goal was to just create a game. i created a game where you have to steal a diamond. there are motion sensers/obstacles that take awa a heart
+          <p><strong>Description:</strong> This project's goal was to just create a game. I created a game where you have to steal a diamond. There are motion sensers/obstacles that take awa a heart
           if you move while its hitting the player. You can deactivate one obstacle and the other fades in and out. You have to collect a weight to switch with the diamond
-          so you dont get caught. To succesfully get away with stealing the diamond you have to exit the doorway with the diamond.</p>
+          so you dont get caught. To succesfully get away with stealing the diamond you have to exit the doorway with the diamond. Things learned: onKeyPress, onKeyHold,complex conditionals.</p>
           <p><strong>Sample Code:</strong></p>
           <code>
             def diamond(x,y):
@@ -423,10 +423,8 @@ if(slide.value == 2):
               elif(300&lt;x and x&lt;400):
                 Oval(x,y,30,10,fill='lightCoral')
                 Polygon(x-15,y,x+15,y,x,y+20,fill='lightCoral')
-
-              diamond(app.diamondx,app.diamondy)
-
-              def onKeyPress(key):
+            <strong>diamond(app.diamondx,app.diamondy)</strong>
+            def onKeyPress(key):
                 if(key is ('c') and player.hitsShape(bag)==True):
                   weight(300,20)
                   Circle(350,350,21,fill='peachPuff')
@@ -439,8 +437,7 @@ if(slide.value == 2):
                   cover.toFront()
                   app.diamondx=250
                   app.diamondy=20
-
-                  <strong>diamond(app.diamondx,app.diamondy)</strong>
+            <strong>diamond(app.diamondx,app.diamondy)</strong>
                 elif(key is ('c') and player.hitsShape(diamondHit)==True and app.switch==False):
                   app.lose=True
                   finish()
