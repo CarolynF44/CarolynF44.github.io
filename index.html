@@ -411,16 +411,16 @@ if(slide.value == 2):
           <p><strong>Sample Code:</strong></p>
           <code>
             def diamond(x,y):
-              if(x<100):
+              if(x&lt;100):
                 Oval(x,y,30,10,fill='lightBlue')
                 Polygon(x-15,y,x+15,y,x,y+20,fill='lightBlue')
-              elif(100<x and x<200):
+              elif(100&lt;x and x&lt;200):
                 Oval(x,y,30,10,fill='pink')
                 Polygon(x-15,y,x+15,y,x,y+20,fill='pink')
-              elif(x<300 and x>200):
+              elif(x&lt;300 and x&gt;200):
                 Oval(x,y,30,10,fill='purple')
                 Polygon(x-15,y,x+15,y,x,y+20,fill='purple')
-              elif(300<x and x<400):
+              elif(300&lt;x and x&lt;400):
                 Oval(x,y,30,10,fill='lightCoral')
                 Polygon(x-15,y,x+15,y,x,y+20,fill='lightCoral')
 
@@ -439,6 +439,7 @@ if(slide.value == 2):
                   cover.toFront()
                   app.diamondx=250
                   app.diamondy=20
+
                   <strong>diamond(app.diamondx,app.diamondy)</strong>
                 elif(key is ('c') and player.hitsShape(diamondHit)==True and app.switch==False):
                   app.lose=True
