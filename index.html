@@ -411,39 +411,38 @@ if(slide.value == 2):
           <p><strong>Sample Code:</strong></p>
           <code>
             def diamond(x,y):
-    print('hi')
-    if(x<100):
-        Oval(x,y,30,10,fill='lightBlue')
-        Polygon(x-15,y,x+15,y,x,y+20,fill='lightBlue')
-    elif(100<x and x<200):
-        Oval(x,y,30,10,fill='pink')
-        Polygon(x-15,y,x+15,y,x,y+20,fill='pink')
-    elif(x<300 and x>200):
-        Oval(x,y,30,10,fill='purple')
-        Polygon(x-15,y,x+15,y,x,y+20,fill='purple')
-    elif(300<x and x<400):
-        Oval(x,y,30,10,fill='lightCoral')
-        Polygon(x-15,y,x+15,y,x,y+20,fill='lightCoral')
+              if(x<100):
+                Oval(x,y,30,10,fill='lightBlue')
+                Polygon(x-15,y,x+15,y,x,y+20,fill='lightBlue')
+              elif(100<x and x<200):
+                Oval(x,y,30,10,fill='pink')
+                Polygon(x-15,y,x+15,y,x,y+20,fill='pink')
+              elif(x<300 and x>200):
+                Oval(x,y,30,10,fill='purple')
+                Polygon(x-15,y,x+15,y,x,y+20,fill='purple')
+              elif(300<x and x<400):
+                Oval(x,y,30,10,fill='lightCoral')
+                Polygon(x-15,y,x+15,y,x,y+20,fill='lightCoral')
 
-        diamond(app.diamondx,app.diamondy)
+              diamond(app.diamondx,app.diamondy)
 
-        def onKeyPress(key):
-    if(key is ('c') and player.hitsShape(bag)==True):
-        weight(300,20)
-        Circle(350,350,21,fill='peachPuff')
-        player.toFront()
-        app.switch=True
-        light.toFront()
-    elif(key is ('c') and player.hitsShape(diamondHit)==True and app.switch==True):
-        weight(app.diamondx,app.diamondy)
-        cover.visible=True
-        cover.toFront()
-        app.diamondx=250
-        app.diamondy=20
-        diamond(app.diamondx,app.diamondy)
-    elif(key is ('c') and player.hitsShape(diamondHit)==True and app.switch==False):
-        app.lose=True
-        finish()
+              def onKeyPress(key):
+                if(key is ('c') and player.hitsShape(bag)==True):
+                  weight(300,20)
+                  Circle(350,350,21,fill='peachPuff')
+                  player.toFront()
+                  app.switch=True
+                  light.toFront()
+                elif(key is ('c') and player.hitsShape(diamondHit)==True and app.switch==True):
+                  weight(app.diamondx,app.diamondy)
+                  cover.visible=True
+                  cover.toFront()
+                  app.diamondx=250
+                  app.diamondy=20
+                  <strong>diamond(app.diamondx,app.diamondy)</strong>
+                elif(key is ('c') and player.hitsShape(diamondHit)==True and app.switch==False):
+                  app.lose=True
+                  finish()
     <strong>cursor.toFront()</strong>
     app.background=gradient('peachPuff','lemonChiffon','white')
           </code>
