@@ -391,9 +391,67 @@ if(slide.value == 2):
         </div>
       </div>
 
-      <div class="project">
-        <div class="project-title">Project 5 - Coming Soon</div>
-        <p>App related to another UN Global Goal.</p>
+      <<div class="project">
+        <div class="project-title">Project 5 </div>
+         <iframe
+          width="410"
+          height="460"
+          src="https://academy.cs.cmu.edu/sharing/plumSquirrel280336"
+          title="Project 5"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>  
+      <button class="dropdown-button" onclick="toggleDropdown('project4-details', this)">
+          Show Info <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-content" id="project5-details">
+          <p><strong>Description:</strong> This project's goal was to just create a game. i created a game where you have to steal a diamond. there are motion sensers/obstacles that take awa a heart
+          if you move while its hitting the player. You can deactivate one obstacle and the other fades in and out. You have to collect a weight to switch with the diamond
+          so you dont get caught. To succesfully get away with stealing the diamond you have to exit the doorway with the diamond.</p>
+          <p><strong>Sample Code:</strong></p>
+          <code>
+            def diamond(x,y):
+    print('hi')
+    if(x<100):
+        Oval(x,y,30,10,fill='lightBlue')
+        Polygon(x-15,y,x+15,y,x,y+20,fill='lightBlue')
+    elif(100<x and x<200):
+        Oval(x,y,30,10,fill='pink')
+        Polygon(x-15,y,x+15,y,x,y+20,fill='pink')
+    elif(x<300 and x>200):
+        Oval(x,y,30,10,fill='purple')
+        Polygon(x-15,y,x+15,y,x,y+20,fill='purple')
+    elif(300<x and x<400):
+        Oval(x,y,30,10,fill='lightCoral')
+        Polygon(x-15,y,x+15,y,x,y+20,fill='lightCoral')
+
+        diamond(app.diamondx,app.diamondy)
+
+        def onKeyPress(key):
+    if(key is ('c') and player.hitsShape(bag)==True):
+        weight(300,20)
+        Circle(350,350,21,fill='peachPuff')
+        player.toFront()
+        app.switch=True
+        light.toFront()
+    elif(key is ('c') and player.hitsShape(diamondHit)==True and app.switch==True):
+        weight(app.diamondx,app.diamondy)
+        cover.visible=True
+        cover.toFront()
+        app.diamondx=250
+        app.diamondy=20
+        diamond(app.diamondx,app.diamondy)
+    elif(key is ('c') and player.hitsShape(diamondHit)==True and app.switch==False):
+        app.lose=True
+        finish()
+    <strong>cursor.toFront()</strong>
+    app.background=gradient('peachPuff','lemonChiffon','white')
+          </code>
+          <p><strong>Explanation:</strong> The first chunk of code shows the code for the function of the diamond. There are if and elif statements with 'and' that codes for the color.
+          depending on the location the color changes. The second small chunk shows how I call it. Its only the function call beacuse the diamond appears at the start of the game.
+          The last chunk shows an example of onKeyPress and the different actions. It also shows the second time I call the diamond function. 
+            This time so it appears in the inventory after the player colllects the diamond </p>
+        </div>
       </div>
 
       <div class="project">
