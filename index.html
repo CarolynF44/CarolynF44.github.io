@@ -391,6 +391,8 @@ if(slide.value == 2):
         </div>
       </div>
 
+      
+
       <<div class="project">
         <div class="project-title">Project 5 </div>
          <iframe
@@ -450,14 +452,68 @@ if(slide.value == 2):
             This time so it appears in the inventory after the player colllects the diamond </p>
         </div>
       </div>
-
-      <div class="project">
-        <div class="project-title">Project 6 - Coming Soon</div>
-        <p>App related to another UN Global Goal.</p>
-      </div>
     </section>
   </main>
+<<div class="project">
+        <div class="project-title">Project 6 </div>
+         <iframe
+          width="410"
+          height="460"
+          src="https://academy.cs.cmu.edu/sharing/violetCamel076722"
+          title="Project 6"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>  
+      <button class="dropdown-button" onclick="toggleDropdown('project6-details', this)">
+          Show Info <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-content" id="project6-details">
+          <p><strong>Description:</strong> This projects goal was to create a game related to another global goal. I choose Life under the water.
+            This global goal is about the ocean. To win the game collect and get rid of all the trash in the ocean while avoiding the fish.
+            Ther are alos stats you look at about the problem as well as a section that says the main problems.Things learned:onStep,Groups,group methods,complex conditional,onMousePress,onkeyPress.</p>
+          <p><strong>Sample Code:</strong></p>
+          <code>
+            def finishGame(message,labelSize):
+    Rect(0,0,400,400,fill=app.color)
+    Label(message,200,200,size=labelSize,font='cinzel')
+    app.stop()
+    if(app.netBottle==True and app.netCan==True and app.netCanPlastic==True):
+        app.color='pink'
+    elif(app.netBottle==True and app.netCan==True and app.netCanPlastic==False):
+        app.color='hotPink'
+    elif(app.netBottle==True and app.netCan==False and app.netCanPlastic==False):
+        app.color='red'
+    elif(app.netBottle==False and app.netCan==False and app.netCanPlastic==False):
+        app.color='Crimson'
+    else:
+        app.color='lemonChiffon'
 
+def onStep():
+    fishies.centerX -= app.dx
+    if (fishies.left &lt; 0):
+        fishies.right = 400
+    if(subs.hitsShape(fishies) and fishies.visible==True):
+        <strong>finishGame('You killed a fish. You lose!',20)</strong>
+    if(app.netCan==True and app.netBottle==True and app.netCanPlastic==True):
+        <strong>finishGame('You got rid of all the trash. You win',15)</strong>
+            
+      def onKeyPress(key):
+    if(key=='c'):
+        if(subs.hitsShape(can) and app.bottleTook==False and app.canPlasticTook==False):
+            can.visible=False
+            app.canTook=True
+        elif(subs.hitsShape(bottle) and app.canTook==False and app.canPlasticTook==False ):
+            bottle.visible=False
+            app.bottleTook=True
+        elif(subs.hitsShape(canPlastic) and app.canTook==False and app.bottleTook==False):
+            canPlastic.visible=False
+            app.canPlasticTook=True
+          </code>
+          <p><strong>Explanation:</strong> The first chunk of code shows the code for the function finishGame. The parameters are the message and the size of the label.
+            There are if,elif and else statements to code for the background color based on what trash was retrieved. The second chunk shows onStep with bolded example 
+            of me calling finishGame(). finsigame also stops the app. The lost chunk shows a small section of onKeyPress. This section codes for when you pick up a piece of trash</p>
+        </div>
+      </div>
   <footer></footer>
 
   <script>
